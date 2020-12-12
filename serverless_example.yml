@@ -1,0 +1,21 @@
+service: hunter
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  profile: hunter
+  region: '%aws region%'
+  environment:
+    TELEGRAM_BOT_TOKEN: '1'
+    TELEGRAM_USER_ID: 1
+    TELEGRAM_CHANNEL_ID: 1
+    TELEGRAM_LOGS_CHANNEL_ID: 1
+
+functions:
+  hunter:
+    handler: handler.run
+    memorySize: 128
+    timeout: 35
+    events:
+      - schedule: rate(1 minute)

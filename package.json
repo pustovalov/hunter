@@ -1,0 +1,30 @@
+{
+  "name": "hunter",
+  "version": "1.0.0",
+  "description": "hunter",
+  "author": "Pavel Pustovalov",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "node-telegram-bot-api": "^0.50.0"
+  },
+  "scripts": {
+    "deploy": "sls deploy --aws-profile hunter",
+    "remove": "sls remove",
+    "call": "sls invoke --function hunter",
+    "call:local": "sls invoke local --function hunter",
+    "build": "sls package",
+    "lint": "yarn prettier --write ."
+  },
+  "devDependencies": {
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "serverless": "^2.15.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
