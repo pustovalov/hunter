@@ -17,7 +17,11 @@ const checkRozetka = async() => {
 
   const data = response.data
 
-  if (data.sell_status !== 'out_of_stock' || data.has_shops || data.show_in_site) {
+  if (
+    (data.sell_status !== 'out_of_stock' && data.sell_status !== 'unavailable') ||
+    data.has_shops ||
+    data.show_in_site
+  ) {
     sendTelegramCM('Rozetka: TIME TO BUY PS5')
   } else {
     const logText = `
