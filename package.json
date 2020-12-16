@@ -10,7 +10,7 @@
   },
   "scripts": {
     "deploy": "sls deploy --aws-profile hunter",
-    "remove": "sls remove",
+    "revoke": "sls remove",
     "call": "sls invoke --function hunter",
     "call:local": "sls invoke local --function hunter",
     "build": "sls package",

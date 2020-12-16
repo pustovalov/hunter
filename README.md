@@ -6,4 +6,4 @@ Unfortunately, retailers cannot make a good system of notification about the ava
 
 `yarn deploy` - deploy function
 
-`yarn remove` - destroy function
+`yarn revoke` - destroy function
