@@ -2,10 +2,11 @@ service: hunter
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   stage: dev
   profile: hunter
   region: '%aws region%'
+  lambdaHashingVersion: 20201221
   environment:
     TELEGRAM_BOT_TOKEN: '1'
     TELEGRAM_USER_ID: 1
