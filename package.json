@@ -14,17 +14,13 @@
     "call": "sls invoke --function hunter",
     "call:local": "sls invoke local --function hunter",
     "build": "sls package",
-    "lint": "yarn prettier --write ."
+    "lint": "yarn prettier --write .",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "husky": "^4.3.5",
-    "lint-staged": "^10.5.3",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.1",
     "prettier": "^2.2.1",
     "serverless": "^2.52.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
